@@ -19,7 +19,8 @@
     <option value="1.0.13">1.0.13</option>
     <option value="1.0.12">1.0.12</option>
   </select>
-  <p>look at console to see logs</p>
+  
+  <!--<p>look at console to see logs</p>-->
   Options:<br />
   <label for="maxSizeMB">maxSizeMB:
     <input type="number" id="maxSizeMB" name="maxSizeMB" value="1" /></label><br />
@@ -28,7 +29,7 @@
   <hr />
   <div>
     <label for="web-worker">
-      Compress in web-worker <span id="web-worker-progress"></span>
+      Compress di web-worker <span id="web-worker-progress"></span>
       <input id="web-worker" type="file" accept="image/*" onchange="compressImage(event, true);" />
     </label>
     <p id="web-worker-log"></p>
@@ -36,7 +37,7 @@
   <hr />
   <div>
     <label for="main-thread">
-      Compress in main thread <span id="main-thread-progress"></span>
+      Compress di main thread <span id="main-thread-progress"></span>
       <input id="main-thread" type="file" accept="image/*" onchange="compressImage(event, false);" />
     </label>
     <p id="main-thread-log"></p>
@@ -56,16 +57,25 @@
     </table> -->
 
   <style>
-    /*
-    .animation {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: rgb(0, 153, 255);
-      animation: left-right 2s ease-in-out infinite;
-    }
-      */
+   body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+
+
+  justify-content: center;
+  align-items: center;
+}
+
+.glass {
+  width: 300px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
 
     @keyframes left-right {
       0% {
